@@ -8,7 +8,7 @@ Summary:	POE - multitasking and networking framework for Perl
 Summary(pl):	POE - wielozadaniowe i sieciowe ¶rodowisko dla Perla
 Name:		perl-POE
 Version:	0.2802
-Release:	2
+Release:	3
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -96,7 +96,7 @@ zajmuje oko³o 30 linii kodu, z których wiêkszo¶æ to w³a¶ciwa logika.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{perl_vendorlib}/POE/Component/CD
+install -d $RPM_BUILD_ROOT%{perl_vendorlib}/POE/{Component/CD,Session}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
@@ -110,6 +110,6 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc CHANGES NEEDS README TODO
 %{perl_vendorlib}/*.pm
-%{perl_vendorlib}/%{pdir}
+%{perl_vendorlib}/POE
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
