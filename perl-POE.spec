@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	POE
@@ -17,7 +17,7 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 URL:		http://poe.perl.org/
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{!?_without_tests:1}0
+%if %{with tests}
 BuildRequires:	perl(Filter::Util::Call) >= 1.04
 BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-Curses
@@ -89,7 +89,7 @@ zajmuje oko³o 30 linii kodu, z których wiêkszo¶æ to w³a¶ciwa logika.
 	--default
 %{__make}
 
-%if %{!?_without_tests:1}0
+%if %{with tests}
 %{__chmod} 000 t/06_tk.t t/21_gtk.t
 %{__make} test
 %endif
@@ -100,7 +100,6 @@ install -d $RPM_BUILD_ROOT%{perl_vendorlib}/POE/Component/CD
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_examplesdir}
 cp -r samples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
