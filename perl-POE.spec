@@ -62,7 +62,7 @@ obiektowe Perla"). Jest to szkielet obs³ugi sieci i wielozadaniowo¶ci
 (nazywanej przez niektórych "kooperatywnym w±tkowaniem") dla Perla.
 Jest aktywnie rozwijane od 1996 roku, a pierwsze publiczne wydanie
 by³o w 1998 roku. Na O'Reilly's Perl Conference (teraz OSCON) w 1999
-roku POE zosta³o nazwane "Najnowszym nowym modu³em".
+roku POE zosta³o nazwane "Najlepszym nowym modu³em".
 
 POE jest u¿ywane w systemach mission-critical, takich jak
 miêdzysieciowe rynki finansowe, systemy plików, serwery aplikacji i
