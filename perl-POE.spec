@@ -96,14 +96,14 @@ zajmuje oko³o 30 linii kodu, z których wiêkszo¶æ to w³a¶ciwa logika.
 
 install -d $RPM_BUILD_ROOT%{perl_vendorlib}/POE/Component/CD
 
-install -d $RPM_BUILD_ROOT%{_examplesdir}
-cp -r samples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+install -d $RPM_BUILD_ROOT%{_examplesdir}
+cp -r samples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -111,5 +111,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc CHANGES NEEDS README TODO
+%{perl_vendorlib}/*.pm
 %{perl_vendorlib}/%{pdir}
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}
 %{_mandir}/man3/*
