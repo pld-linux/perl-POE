@@ -4,13 +4,13 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	POE
-Summary:	POE - multitasking and networking framework for perl
-#Summary(pl):	
+Summary:	POE - multitasking and networking framework for Perl
+Summary(pl):	POE - wielozadaniowe i sieciowe ¶rodowisko dla Perla
 Name:		perl-POE
 Version:	0.26
 Release:	1
 # same as perl
-License:	GPL/Artistic
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 # Source0-md5:	e9affcb6facdd14a8f3c8791da9dce35
@@ -56,8 +56,29 @@ POE includes components and libraries for making quick work of network
 clients, servers, and peers.  A simple stand-alone web application takes
 about 30 lines of code, most of which is your own custom logic.
 
-# %description -l pl
-# TODO
+%description -l pl
+POE to skrót od "Perl Object Environment" (co oznacza "¶rodowisko
+obiektowe Perla"). Jest to szkielet obs³ugi sieci i wielozadaniowo¶ci
+(nazywanej przez niektórych "kooperatywnym w±tkowaniem") dla Perla.
+Jest aktywnie rozwijane od 1996 roku, a pierwsze publiczne wydanie
+by³o w 1998 roku. Na O'Reilly's Perl Conference (teraz OSCON) w 1999
+roku POE zosta³o nazwane "Najnowszym nowym modu³em".
+
+POE jest u¿ywane w systemach mission-critical, takich jak
+miêdzysieciowe rynki finansowe, systemy plików, serwery aplikacji i
+handlowe. Jest u¿ywane w projektach o rozmiarach od kilku linii do
+dziesi±tek tysiêcy.
+
+POE jest kompatybilne z Perlem od wersji 5.005_03.
+
+POE zawiera rozwijaj±cy siê szkielet komponentów. Komponenty to
+wysokopoziomowe, modularne, daj±ce siê wielokrotnie wykorzystywaæ
+kawa³ki programów. Czê¶æ komponentów zosta³a opublikowana w CPAN,
+wiêcej mo¿na znale¼æ na stronie WWW POE.
+
+POE zawiera komponenty i biblioteki do szybkiego tworzenia klientów,
+serwerów i partnerów sieciowych. Prosta, samodzielna aplikacja WWW
+zajmuje oko³o 30 linii kodu, z których wiêkszo¶æ to w³a¶ciwa logika.
 
 %prep
 %setup -q -n %{pdir}-%{version}
