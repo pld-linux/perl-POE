@@ -94,10 +94,9 @@ zajmuje oko³o 30 linii kodu, z których wiêkszo¶æ to w³a¶ciwa logika.
 %{__make} test
 %endif
 
-install -d $RPM_BUILD_ROOT%{perl_vendorlib}/POE/Component/CD
-
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{perl_vendorlib}/POE/Component/CD
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
