@@ -13,6 +13,7 @@ Release:	1
 License:	GPL/Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+# Source0-md5:	e9affcb6facdd14a8f3c8791da9dce35
 URL:		http://poe.perl.org/
 BuildRequires:	perl-devel >= 5.6
 BuildRequires:	rpm-perlprov >= 4.1-13
