@@ -7,14 +7,14 @@
 Summary:	POE - multitasking and networking framework for Perl
 Summary(pl):	POE - wielozadaniowe i sieciowe ¶rodowisko dla Perla
 Name:		perl-POE
-Version:	0.29
+Version:	0.3003
 Release:	1
 Epoch:		1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
-# Source0-md5:	1711e3cd92b388cbe89f6f801d5d0452
+# Source0-md5:	3b30a2c47099bfbc5a67182a48c6957b
 URL:		http://poe.perl.org/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -24,8 +24,11 @@ BuildRequires:	perl-Compress-Zlib
 BuildRequires:	perl-Curses
 BuildRequires:	perl-Event
 BuildRequires:	perl-IO-Tty
-BuildRequires:	perl-Term-ReadKey
-BuildRequires:	perl-URI
+BuildRequires:	perl-Socket6 >= 0.14
+BuildRequires:	perl-Storable >= 2.12
+BuildRequires:	perl-Term-ReadKey >= 2.21
+BuildRequires:	perl-Time-HiRes >= 1.59
+BuildRequires:	perl-URI >= 1.30
 BuildRequires:	perl-libwww
 %endif
 BuildArch:	noarch
@@ -88,10 +91,7 @@ zajmuje oko³o 30 linii kodu, z których wiêkszo¶æ to w³a¶ciwa logika.
 	--default
 %{__make}
 
-%if %{with tests}
-%{__chmod} 000 t/06_tk.t t/21_gtk.t
-%{__make} test
-%endif
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -107,7 +107,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES NEEDS README TODO
+%doc CHANGES HISTORY README TODO
 %{perl_vendorlib}/*.pm
 %{perl_vendorlib}/POE
 %attr(755,root,root) %{_examplesdir}/%{name}-%{version}
