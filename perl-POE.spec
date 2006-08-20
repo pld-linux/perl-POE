@@ -9,7 +9,7 @@ Summary(pl):	POE - wielozadaniowe i sieciowe ¶rodowisko dla Perla
 Name:		perl-POE
 Version:	0.36
 Release:	0.3
-Epoch:		1
+Epoch:		2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
