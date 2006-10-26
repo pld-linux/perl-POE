@@ -33,6 +33,7 @@ BuildRequires:	perl-URI >= 1.30
 BuildRequires:	perl-libwww
 %endif
 Conflicts:	perl-POE-Filter-XML < 0.29
+Obsoletes:	perl-POE-Exceptions
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
