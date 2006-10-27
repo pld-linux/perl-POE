@@ -1,0 +1,18 @@
+--- POE-0.38/Makefile.PL~	2006-10-27 22:58:42.000000000 +0200
++++ POE-0.38/Makefile.PL	2006-10-27 22:58:42.000000000 +0200
+@@ -49,12 +49,12 @@
+ 
+ $prompt .= "(Any text other than Y or y will be taken as a no)";
+ 
+-my $ret = "n";
++my $ret = "y";
+ if (grep /^--default$/, @ARGV) {
+-  print $prompt, " [n] n\n\n";
++  print $prompt, " [y] y\n\n";
+ }
+ else {
+-  $ret = prompt($prompt, "n");
++  $ret = prompt($prompt, "y");
+ }
+ 
+ my $marker = 'run_network_tests';
