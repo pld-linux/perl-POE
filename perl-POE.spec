@@ -8,13 +8,14 @@ Summary:	POE - multitasking and networking framework for Perl
 Summary(pl):	POE - wielozadaniowe i sieciowe ¶rodowisko dla Perla
 Name:		perl-POE
 Version:	0.38
-Release:	0.1
+Release:	1
 Epoch:		2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
 # Source0-md5:	5612affcb018cdda9807b6a0ea4db152
+Patch0:		%{name}-no_network_tests_by_default.patch
 URL:		http://poe.perl.org/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -87,6 +88,7 @@ zajmuje oko³o 30 linii kodu, z których wiêkszo¶æ to w³a¶ciwa logika.
 
 %prep
 %setup -q -n %{pdir}-%{version}
+%patch -p1
 
 %build
 %{__perl} Makefile.PL \
@@ -103,7 +105,7 @@ install -d $RPM_BUILD_ROOT%{perl_vendorlib}/POE/{Component/CD,Session}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}
-cp -r samples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -r examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -113,5 +115,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES HISTORY README TODO
 %{perl_vendorlib}/*.pm
 %{perl_vendorlib}/POE
-%attr(755,root,root) %{_examplesdir}/%{name}-%{version}
+%dir %{_examplesdir}/%{name}-%{version}
+%{_examplesdir}/%{name}-%{version}/README*
+%attr(755,root,root) %{_examplesdir}/%{name}-%{version}/*.perl
 %{_mandir}/man3/*
