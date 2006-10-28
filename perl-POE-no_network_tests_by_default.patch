@@ -16,3 +16,29 @@
  }
  
  my $marker = 'run_network_tests';
+--- POE-0.38/tests/90_regression/cfedde-filter-httpd.t~	2006-10-28 09:02:21.000000000 +0200
++++ POE-0.38/tests/90_regression/cfedde-filter-httpd.t	2006-10-28 09:02:21.000000000 +0200
+@@ -11,6 +11,10 @@
+     print "1..0 # skip - HTTP::Request needed to test POE::Filter::HTTPD\n";
+     exit;
+   }
++  unless (-f 'run_network_tests') {
++    print "1..0 # skip - Network access (and permission) required to run this test\n";
++    exit;
++  }
+ }
+ 
+ use Test::More tests => 2;
+--- POE-0.38/tests/90_regression/immute-server-tcp-filter.t~	2006-10-28 09:02:43.000000000 +0200
++++ POE-0.38/tests/90_regression/immute-server-tcp-filter.t	2006-10-28 09:02:43.000000000 +0200
+@@ -11,6 +11,10 @@
+     print "1..0 # skip - HTTP::Request needed to test POE::Filter::HTTPD\n";
+     exit;
+   }
++  unless (-f 'run_network_tests') {
++    print "1..0 # skip - Network access (and permission) required to run this test\n";
++    exit;
++  }
+ }
+ 
+ #BEGIN { @INC = ('/share/immute/svn/poe/poe/lib', @INC); }
