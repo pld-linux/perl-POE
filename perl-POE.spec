@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	POE
 Summary:	POE - multitasking and networking framework for Perl
-Summary(pl):	POE - wielozadaniowe i sieciowe ¶rodowisko dla Perla
+Summary(pl.UTF-8):   POE - wielozadaniowe i sieciowe Å›rodowisko dla Perla
 Name:		perl-POE
 Version:	0.38
 Release:	2
@@ -62,29 +62,29 @@ POE includes components and libraries for making quick work of network
 clients, servers, and peers.  A simple stand-alone web application takes
 about 30 lines of code, most of which is your own custom logic.
 
-%description -l pl
-POE to skrót od "Perl Object Environment" (co oznacza "¶rodowisko
-obiektowe Perla"). Jest to szkielet obs³ugi sieci i wielozadaniowo¶ci
-(nazywanej przez niektórych "kooperatywnym w±tkowaniem") dla Perla.
+%description -l pl.UTF-8
+POE to skrÃ³t od "Perl Object Environment" (co oznacza "Å›rodowisko
+obiektowe Perla"). Jest to szkielet obsÅ‚ugi sieci i wielozadaniowoÅ›ci
+(nazywanej przez niektÃ³rych "kooperatywnym wÄ…tkowaniem") dla Perla.
 Jest aktywnie rozwijane od 1996 roku, a pierwsze publiczne wydanie
-by³o w 1998 roku. Na O'Reilly's Perl Conference (teraz OSCON) w 1999
-roku POE zosta³o nazwane "Najlepszym nowym modu³em".
+byÅ‚o w 1998 roku. Na O'Reilly's Perl Conference (teraz OSCON) w 1999
+roku POE zostaÅ‚o nazwane "Najlepszym nowym moduÅ‚em".
 
-POE jest u¿ywane w systemach mission-critical, takich jak
-miêdzysieciowe rynki finansowe, systemy plików, serwery aplikacji i
-handlowe. Jest u¿ywane w projektach o rozmiarach od kilku linii do
-dziesi±tek tysiêcy.
+POE jest uÅ¼ywane w systemach mission-critical, takich jak
+miÄ™dzysieciowe rynki finansowe, systemy plikÃ³w, serwery aplikacji i
+handlowe. Jest uÅ¼ywane w projektach o rozmiarach od kilku linii do
+dziesiÄ…tek tysiÄ™cy.
 
 POE jest kompatybilne z Perlem od wersji 5.005_03.
 
-POE zawiera rozwijaj±cy siê szkielet komponentów. Komponenty to
-wysokopoziomowe, modularne, daj±ce siê wielokrotnie wykorzystywaæ
-kawa³ki programów. Czê¶æ komponentów zosta³a opublikowana w CPAN,
-wiêcej mo¿na znale¼æ na stronie WWW POE.
+POE zawiera rozwijajÄ…cy siÄ™ szkielet komponentÃ³w. Komponenty to
+wysokopoziomowe, modularne, dajÄ…ce siÄ™ wielokrotnie wykorzystywaÄ‡
+kawaÅ‚ki programÃ³w. CzÄ™Å›Ä‡ komponentÃ³w zostaÅ‚a opublikowana w CPAN,
+wiÄ™cej moÅ¼na znaleÅºÄ‡ na stronie WWW POE.
 
-POE zawiera komponenty i biblioteki do szybkiego tworzenia klientów,
-serwerów i partnerów sieciowych. Prosta, samodzielna aplikacja WWW
-zajmuje oko³o 30 linii kodu, z których wiêkszo¶æ to w³a¶ciwa logika.
+POE zawiera komponenty i biblioteki do szybkiego tworzenia klientÃ³w,
+serwerÃ³w i partnerÃ³w sieciowych. Prosta, samodzielna aplikacja WWW
+zajmuje okoÅ‚o 30 linii kodu, z ktÃ³rych wiÄ™kszoÅ›Ä‡ to wÅ‚aÅ›ciwa logika.
 
 %prep
 %setup -q -n %{pdir}-%{version}
