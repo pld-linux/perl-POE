@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	POE
 Summary:	POE - multitasking and networking framework for Perl
-Summary(pl.UTF-8):   POE - wielozadaniowe i sieciowe środowisko dla Perla
+Summary(pl.UTF-8):	POE - wielozadaniowe i sieciowe środowisko dla Perla
 Name:		perl-POE
 Version:	0.38
 Release:	2
