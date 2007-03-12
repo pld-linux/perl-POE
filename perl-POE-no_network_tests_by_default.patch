@@ -1,14 +1,13 @@
---- POE-0.38/Makefile.PL~	2006-10-27 22:58:42.000000000 +0200
-+++ POE-0.38/Makefile.PL	2006-10-27 22:58:42.000000000 +0200
-@@ -49,12 +49,12 @@
+--- Makefile.PL.org	2007-03-12 13:04:43.242992000 +0100
++++ Makefile.PL	2007-03-12 13:05:16.022992000 +0100
+@@ -42,12 +42,12 @@
  
- $prompt .= "(Any text other than Y or y will be taken as a no)";
+ Would you like to skip the network tests?|;
  
 -my $ret = "n";
 +my $ret = "y";
  if (grep /^--default$/, @ARGV) {
--  print $prompt, " [n] n\n\n";
-+  print $prompt, " [y] y\n\n";
+   print $prompt, " [n] n\n\n";
  }
  else {
 -  $ret = prompt($prompt, "n");
@@ -16,29 +15,3 @@
  }
  
  my $marker = 'run_network_tests';
---- POE-0.38/tests/90_regression/cfedde-filter-httpd.t~	2006-10-28 09:02:21.000000000 +0200
-+++ POE-0.38/tests/90_regression/cfedde-filter-httpd.t	2006-10-28 09:02:21.000000000 +0200
-@@ -11,6 +11,10 @@
-     print "1..0 # skip - HTTP::Request needed to test POE::Filter::HTTPD\n";
-     exit;
-   }
-+  unless (-f 'run_network_tests') {
-+    print "1..0 # skip - Network access (and permission) required to run this test\n";
-+    exit;
-+  }
- }
- 
- use Test::More tests => 2;
---- POE-0.38/tests/90_regression/immute-server-tcp-filter.t~	2006-10-28 09:02:43.000000000 +0200
-+++ POE-0.38/tests/90_regression/immute-server-tcp-filter.t	2006-10-28 09:02:43.000000000 +0200
-@@ -11,6 +11,10 @@
-     print "1..0 # skip - HTTP::Request needed to test POE::Filter::HTTPD\n";
-     exit;
-   }
-+  unless (-f 'run_network_tests') {
-+    print "1..0 # skip - Network access (and permission) required to run this test\n";
-+    exit;
-+  }
- }
- 
- #BEGIN { @INC = ('/share/immute/svn/poe/poe/lib', @INC); }
