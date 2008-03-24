@@ -13,7 +13,7 @@ Epoch:		2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/POE/%{pdir}-%{version}.tar.gz
 # Source0-md5:	6672a43075cd597ed1011db5b45f1f1d
 Patch0:		%{name}-no_network_tests_by_default.patch
 Patch1:		%{name}-filter-httpd.patch
@@ -91,7 +91,7 @@ zajmuje około 30 linii kodu, z których większość to właściwa logika.
 %setup -q -n %{pdir}-%{version}
 %patch0 -p0
 %patch1 -p0
-rm lib/POE/Filter/HTTPD.pm.orig
+rm -f lib/POE/Filter/HTTPD.pm.orig
 
 %build
 %{__perl} Makefile.PL \
