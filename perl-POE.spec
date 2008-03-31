@@ -91,7 +91,7 @@ zajmuje około 30 linii kodu, z których większość to właściwa logika.
 %setup -q -n %{pdir}-%{version}
 %patch0 -p0
 %patch1 -p0
-rm -f lib/POE/Filter/HTTPD.pm.orig
+rm -f lib/POE/Filter/HTTPD.pm{~.orig}
 
 %build
 %{__perl} Makefile.PL \
