@@ -37,7 +37,7 @@ Obsoletes:	perl-POE-Exceptions
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define	_noautoreq	perl(Curses) perl(HTTP::Date) perl(HTTP::Request) perl(HTTP::Response) perl(HTTP::Status) perl(URI) perl(Term::Cap) perl(Term::ReadKey)
+%define	_noautoreq	perl(Curses) perl(HTTP::Date) perl(HTTP::Request) perl(HTTP::Response) perl(HTTP::Status) perl(URI) perl(Term::Cap) perl(Term::ReadKey) perl(Tk)
 
 %description
 POE is an acronym of "Perl Object Environment".  It's a networking
