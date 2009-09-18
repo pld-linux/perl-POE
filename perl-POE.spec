@@ -7,24 +7,24 @@
 Summary:	POE - multitasking and networking framework for Perl
 Summary(pl.UTF-8):	POE - wielozadaniowe i sieciowe środowisko dla Perla
 Name:		perl-POE
-Version:	1.006
+Version:	1.268
 Release:	1
 Epoch:		2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/POE/%{pdir}-%{version}.tar.gz
-# Source0-md5:	13c4ee6ab28b5ca1d031e654a50a3859
+# Source0-md5:	e5290beba4884064da68320dc46bf296
 URL:		http://poe.perl.org/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildRequires:	perl-Test-Simple >= 0.54
 %if %{with tests}
 BuildRequires:	perl(Filter::Util::Call) >= 1.04
-BuildRequires:	perl-Compress-Zlib
+BuildRequires:	perl-IO-Compress
 BuildRequires:	perl-Curses
 BuildRequires:	perl-Event
-BuildRequires:	perl-IO-Tty
+BuildRequires:	perl-IO-Tty >= 1.08
 BuildRequires:	perl-Socket6 >= 0.14
 BuildRequires:	perl-Storable >= 2.12
 BuildRequires:	perl-Term-ReadKey >= 2.21
